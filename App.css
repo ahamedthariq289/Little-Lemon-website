@@ -1,0 +1,383 @@
+* {
+  box-sizing: border-box;
+}
+
+.app {
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+}
+
+/* header */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  /* background-color: #F4CE14; */
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  align-items: center;
+}
+
+nav a {
+  text-decoration: none;
+  /* color: #333; */
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: black;
+}
+
+@media(max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  header {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+.logo {
+  height: 50px;
+  width: auto;
+}
+
+/* Hero */
+
+.reserve {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 2rem 1.5rem;
+  background-color: #495E57;
+  color: white;
+}
+
+.div-reserve {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.reserve-button {
+  background-color: #F4CE14;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.reserve img {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  object-fit: cover;;
+}
+
+/* desktop */
+@media(min-width: 768px) {
+  .reserve {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .reserve img {
+    width: 50%;
+    max-width: 500px;
+  }
+
+  .div-reserve {
+    max-width: 400px;
+  }
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 30px 40px;
+  background-color: #495E57;
+  color: white;
+}
+
+.footer-nav ul {
+  display: flex;
+  list-style: none;
+  flex-direction: column;
+  gap: 8px;
+  padding: 0;
+}
+
+.footer-nav a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-nav a:hover {
+  text-decoration: underline;
+}
+
+.footer-address {
+  max-width: 200px;
+}
+
+.socials-footer ul {
+  list-style: none;
+}
+
+.socials-footer a {
+  color: white;
+  text-decoration: none;
+}
+
+.socials-footer a:hover {
+  text-decoration: underline;
+  color: black;
+}
+
+.restaurant-chef-B {
+  width: 150px;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Specials */
+
+.specials {
+  padding: 1.5rem;
+}
+
+@media(min-width: 600px) {
+  .special {
+    padding: 2rem;
+  }
+}
+
+@media(min-width: 900px) {
+  .special {
+    padding: 2rem 4rem;
+  }
+}
+
+.specials-header {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 600px) {
+  .specials-header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.menu-button {
+  background-color: #F4CE14;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.menu-image {
+  width: 100%;
+  height: 180x;
+  overflow: hidden;
+}
+
+/* Testimonials */
+
+.testimonials {
+  padding: 2rem 1.5rem;
+  background-color: #EDEFEE;
+}
+
+.testimonials h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.testimonials-card {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.rating {
+  color: #F4CE14;
+  font-size: 1.2rem;
+  margin: 0 0 0.75rem;
+}
+
+@media(min-width: 768px) {
+  .testimonials-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media(min-width: 1024px) {
+  .testimonials-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* About little lemon */
+
+.chicago {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem 1.5rem;
+}
+
+.chicago-content h2 {
+  margin: 0;
+  color: #F4CE14;
+  font-size: 2.5rem;
+}
+
+.chicago-content h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: normal;
+}
+
+.chicago-content p {
+  margin-top: 1rem;
+  max-width: 500px;
+}
+
+.chicago-images {
+  position: relative;
+  height: 350px;
+}
+
+.chicago-images img {
+  width: 220px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.front-img {
+  position: absolute;
+  left: 0;
+  top: 40px;
+  z-index: 2;
+}
+
+.back-img {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+@media(min-width: 769px) {
+  .chicago {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem;
+  }
+
+  .chicago-content {
+    flex: 1;
+    max-width: 500px;
+  }
+
+  .chicago-images {
+    flex: 1;
+    max-width: 450px;
+  }
+}
+
+/* Booking page */
+
+.booking-page {
+  padding: 2rem 1.5rem;
+  background-color: #EDEFEE;
+}
+
+.reserve-booking {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #495E57;
+}
+
+.booking-form {
+  display: grid;
+  gap: 1rem;
+
+  max-width: 500px;
+  margin: 0 auto;
+
+  background-color: white;
+  padding: 2rem;
+
+  border-radius: 16px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.booking-form label {
+  font-weight: bold;
+}
+
+.booking-form input, .booking-form select {
+  padding: 0.75rem;
+  border: 1px solid #CCC;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.reserve-btn {
+  margin-top: 1rem;
+  padding: 0.9rem 2rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  background-color: #F4CE14;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
